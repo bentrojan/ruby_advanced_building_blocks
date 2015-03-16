@@ -1,6 +1,6 @@
 def bubble_sort(array)
 	(array.length-1).times do		
-		array.each_with_index do |x, i|
+		array.each_index do |i|
 			if (i < array.length-1) && (array[i] > array[i+1]) 
 				array[i], array[i+1] = array[i+1], array[i]
 			end
@@ -11,7 +11,7 @@ end
 
 def bubble_sort_by(array)
 	(array.length-1).times do		
-		array.each_with_index do |x, i|
+		array.each_index do |i|
 			if (i < array.length-1) && (yield(array[i], array[i+1]) < 0) 
 				array[i], array[i+1] = array[i+1], array[i]
 			end
