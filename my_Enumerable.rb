@@ -66,7 +66,7 @@ module Enumerable
 		elsif item.nil?
 			self.length
 		else
-			self.my_select {|x| x==item}.length
+			self.my_select { |x| x==item }.length
 		end
 	end
 
